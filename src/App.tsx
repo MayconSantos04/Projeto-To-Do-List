@@ -1,8 +1,9 @@
-import Text from "./components/text";
+import Text from "./components/Text";
+import Icon from "./components/Icon.tsx";
 import Trash from "./assets/icons/Trash.svg?react";
 import Check from "./assets/icons/Check.svg?react";
 import Plus from "./assets/icons/Plus.svg?react";
-import Icon from "./components/Icon.tsx";
+import Badge from "./components/Badge.tsx";
 
 export default function App() {
   return (
@@ -21,7 +22,12 @@ export default function App() {
       <div>
         <Icon svg={Trash} className="fill-green-base" />
         <Icon svg={Check} className="fill-green-base" />
-        <Icon svg={Plus} className="fill-green-base" />
+        <Icon svg={Plus} className="fill-green-base" animate />
+      </div>
+
+      <div>
+        <Badge variant="secondary">5</Badge>
+        <Badge variant="primary">3 de 5</Badge>
       </div>
     </div>
   );
