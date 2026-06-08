@@ -4,6 +4,7 @@ import Trash from "./assets/icons/Trash.svg?react";
 import Check from "./assets/icons/Check.svg?react";
 import Plus from "./assets/icons/Plus.svg?react";
 import Badge from "./components/Badge.tsx";
+import Button from "./components/Button.tsx";
 
 export default function App() {
   return (
@@ -28,6 +29,10 @@ export default function App() {
       <div>
         <Badge variant="secondary">5</Badge>
         <Badge variant="primary">3 de 5</Badge>
+      </div>
+
+      <div>
+        <Button icon={Plus}>Nova Tarefa</Button>
       </div>
     </div>
   );
