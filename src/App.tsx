@@ -6,6 +6,7 @@ import Plus from "./assets/icons/Plus.svg?react";
 import Badge from "./components/Badge.tsx";
 import Button from "./components/Button.tsx";
 import ButtonIcon from "./components/Button-icon.tsx";
+import InputText from "./components/input-text.tsx";
 
 export default function App() {
   return (
@@ -38,8 +39,12 @@ export default function App() {
 
       <div className="flex gap-1 ">
         <ButtonIcon icon={Trash} />
-        <ButtonIcon icon={Trash} variant="secondary"/>
-        <ButtonIcon icon={Trash} variant="tertiary"/>
+        <ButtonIcon icon={Trash} variant="secondary" />
+        <ButtonIcon icon={Trash} variant="tertiary" />
+      </div>
+
+      <div>
+        <InputText />
       </div>
     </div>
   );
