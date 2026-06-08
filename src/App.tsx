@@ -7,6 +7,7 @@ import Badge from "./components/Badge.tsx";
 import Button from "./components/Button.tsx";
 import ButtonIcon from "./components/Button-icon.tsx";
 import InputText from "./components/input-text.tsx";
+import InputCheckbox from "./components/Input-checkbox.tsx";
 
 export default function App() {
   return (
@@ -46,6 +47,11 @@ export default function App() {
       <div>
         <InputText />
       </div>
+
+      <div>
+        <InputCheckbox />
+      </div>
+
     </div>
   );
 }
