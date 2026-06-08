@@ -1,64 +1,18 @@
-import Text from "./components/Text";
-import Icon from "./components/Icon.tsx";
-import Trash from "./assets/icons/Trash.svg?react";
-import Check from "./assets/icons/Check.svg?react";
-import Plus from "./assets/icons/Plus.svg?react";
-import Badge from "./components/Badge.tsx";
-import Button from "./components/Button.tsx";
-import ButtonIcon from "./components/Button-icon.tsx";
-import InputText from "./components/input-text.tsx";
-import InputCheckbox from "./components/Input-checkbox.tsx";
-import Card from "./components/card.tsx";
-import Container from "./components/Container.tsx";
+import { BrowserRouter, Route, Routes } from "react-router";
+import PageConponents from "./pages/page";
+import PageHome from "./pages/Page-home";
+import LayoutMain from "./pages/Layout-main";
 
 export default function App() {
   return (
-    <div className="flex flex-col gap-2 bg-green-400">
-      <Container>
-        <Text className="text-pink-base">Olá mundo</Text>
-        <Text variant="body-md" className="text-pink-base">
-          Olá mundo
-        </Text>
-        <Text variant="body-md-bold" className="text-pink-base">
-          Olá mundo
-        </Text>
-        <Text variant="body-sm-bold" className="text-pink-base">
-          Olá mundo
-        </Text>
-
-        <div>
-          <Icon svg={Trash} className="fill-green-base" />
-          <Icon svg={Check} className="fill-green-base" />
-          <Icon svg={Plus} className="fill-green-base" animate />
-        </div>
-
-        <div>
-          <Badge variant="secondary">5</Badge>
-          <Badge variant="primary">3 de 5</Badge>
-        </div>
-
-        <div>
-          <Button icon={Plus}>Nova Tarefa</Button>
-        </div>
-
-        <div className="flex gap-1 ">
-          <ButtonIcon icon={Trash} />
-          <ButtonIcon icon={Trash} variant="secondary" />
-          <ButtonIcon icon={Trash} variant="tertiary" />
-        </div>
-
-        <div>
-          <InputText />
-        </div>
-
-        <div>
-          <InputCheckbox />
-        </div>
-
-        <div>
-          <Card size="md">Olá, mundo!</Card>
-        </div>
-      </Container>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<LayoutMain />}>
+          <Route index element={<PageHome />} />
+          <Route path="/componentes" element={<PageConponents />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
+  
