@@ -8,7 +8,7 @@ export const containerVariants = cva("mx-auto", {
     },
   },
   defaultVariants: {
-    size: "md",
+    size: "md" as const,
   },
 });
 
