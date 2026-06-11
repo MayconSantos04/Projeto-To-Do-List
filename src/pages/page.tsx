@@ -3,6 +3,7 @@ import Icon from "../components/Icon.tsx";
 import Trash from "../assets/icons/Trash.svg?react";
 import Check from "../assets/icons/Check.svg?react";
 import Plus from "../assets/icons/Plus.svg?react";
+import spiner from "../assets/icons/spiner.svg?react";
 import Badge from "../components/Badge.tsx";
 import Button from "../components/Button.tsx";
 import ButtonIcon from "../components/Button-icon.tsx";
@@ -30,6 +31,7 @@ export default function PageConponents() {
           <Icon svg={Trash} className="fill-green-base" />
           <Icon svg={Check} className="fill-green-base" />
           <Icon svg={Plus} className="fill-green-base" animate />
+          <Icon svg={spiner} className="fill-green-base" animate />
         </div>
 
         <div>
@@ -39,6 +41,7 @@ export default function PageConponents() {
 
         <div>
           <Button icon={Plus}>Nova Tarefa</Button>
+          <Button icon={Plus} handling>Criando...</Button>
         </div>
 
         <div className="flex gap-1 ">
