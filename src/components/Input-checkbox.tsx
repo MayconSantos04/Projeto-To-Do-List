@@ -1,5 +1,5 @@
 import React from "react";
-import { cva, cx, type VariantProps } from "class-variance-authority";
+import { cva, type VariantProps } from "class-variance-authority";
 import Icon from "./Icon";
 import Check from "../assets/icons/Check.svg?react";
 import Skeleton from "./Skeleton";
@@ -60,7 +60,7 @@ export const inputCheckboxIconVariants = cva(
 
 interface InputCheckboxProps
   extends
-    VariantProps<typeof inputCheckboxIconVariants>,
+    VariantProps<typeof inputCheckboxVariants>,
     Omit<React.ComponentProps<"input">, "size" | "disabled"> {
   loading?: boolean;
 }
